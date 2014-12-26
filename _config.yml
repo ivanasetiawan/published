@@ -2,7 +2,7 @@
 title: Published
 email: ivana.setiawan@gmail.com
 description: Published materials
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/published/" # the subpath of your site, e.g. /blog/
 url: "http://ivanasetiawan.com/published" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
