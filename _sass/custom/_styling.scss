@@ -1,0 +1,136 @@
+// Screen resolutions
+$screen-xs: 380px !default;
+$screen-sm: 480px !default;
+$screen-md: 768px !default;
+$screen-lg: 1160px !default;
+$screen-xl: 1200px !default;
+
+$gutter-sm: 1%;
+$gutter-md: 2%;
+$gutter-lg: 3%;
+
+$screen-xs-max:       ($screen-sm - 1) !default;
+$screen-sm-max:       ($screen-md - 1) !default;
+$screen-md-max:       ($screen-lg - 1) !default;
+$screen-lg-max:       ($screen-xl - 1) !default;
+
+.text-center {
+	text-align: center !important;
+}
+
+em { font-family: "volkhovbold_italic"; }
+
+.italic { font-family: 'volkhovitalic'; }
+
+strong, .strong { font-family: 'volkhovbold'; } 
+
+body {
+	background: url("../images/ricepaper_v3.png");
+	background: url("../images/green_cup.png");
+	
+	// background: url("../images/textured_paper.png");
+	// background: url("../images/subtle_white_feathers.png");
+}
+
+.site-header {
+	border-bottom: 0;
+}
+
+a, 
+a:visited { color: #606060; 
+	&:hover { color: #111; text-decoration: none; 
+		transition: color 0.2s;
+	}
+}
+
+.site-title {
+	font-family: "im_fell_dw_picaregular";
+	letter-spacing: 1px;
+	float: none;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+
+	.author {
+		display: block;
+		font-size: 18px;
+		font-family: 'im_fell_dw_picaitalic';
+		color: #707070;
+	}
+	
+	a { 
+		color: $text-color; 
+		font-size: 30px;
+		text-transform: uppercase;
+		text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
+		&:hover {
+			text-decoration: none; 
+		}
+	}
+
+	@media (min-width: $screen-md) {
+		margin-top: 40px;
+		margin-bottom: 40px;
+		a { 
+			font-size: 40px;
+		}
+		.author {
+			font-size: 22px;
+		}
+	}
+}
+
+.calendar {
+	display: inline-block;
+	text-align: center;
+	font-family: 'im_fell_dw_picaitalic';
+	font-size: 22px;
+	color: #707070;
+}
+
+
+.posts {
+
+	h2 { 
+		font-family: 'im_fell_dw_picaitalic'; 
+		margin-bottom: 0;
+	}
+
+	header { margin-bottom: 20px; }
+
+	article {
+		padding: $spacing-unit/2;
+		background: url("../images/ricepaper_v3.png");
+		box-shadow: rgba(0, 0, 0, 0.1) 0 2px 2px 2px;
+		margin-bottom: $spacing-unit/2;
+	}
+
+	@media (min-width: $screen-md) {
+
+		header { overflow: hidden; }
+
+		p, header { margin-bottom: $spacing-unit; }
+
+		h2 { float: left; font-size: 30px; }
+	
+		.calendar { float: right; }
+	
+		article {
+			padding: $spacing-unit/2 $spacing-unit 1px;
+			margin-bottom: $spacing-unit;
+		}
+	}
+}
+
+
+.site-footer {
+	text-align: center;
+	font-size: 14px; 
+	
+	p { display: inline-block; }
+
+	@media (min-width: $screen-md) {
+		font-size: 16px; 
+	}
+	
+}

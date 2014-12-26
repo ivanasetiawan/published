@@ -1,101 +1,30 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Published</title>
-    <description>Published materials</description>
-    <link>http://ivanasetiawan.com/</link>
-    <atom:link href="http://ivanasetiawan.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 26 Dec 2014 21:36:22 +0100</pubDate>
-    <lastBuildDate>Fri, 26 Dec 2014 21:36:22 +0100</lastBuildDate>
-    <generator>Jekyll v2.5.1</generator>
-    
+    <title>{{ site.title | xml_escape }}</title>
+    <description>{{ site.description | xml_escape }}</description>
+    <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll v{{ jekyll.version }}</generator>
+    {% for post in site.posts limit:10 %}
       <item>
-        <title>Bird</title>
-        <description>&lt;p&gt;You looked so sexy, real pretty with thick red lips &amp;amp; long brunette hair.&lt;br /&gt;
-Cozy conversation..&lt;br /&gt;
-Then he wondered about my girlfriend.&lt;br /&gt;
-Then you asked how could I be single.&lt;br /&gt;
-Then we made out.&lt;br /&gt;
-Then I dumped us.  &lt;/p&gt;
-
-&lt;p&gt;I loved your breasts, but I didn’t fancy your taste.&lt;br /&gt;
-Run our function in a console, ‘us’ returns to null.&lt;br /&gt;
-I am looking for an infinite number of specific prime numbers.  &lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 26 Dec 2014 18:37:52 +0100</pubDate>
-        <link>http://ivanasetiawan.com/jekyll/update/2014/12/26/bird.html</link>
-        <guid isPermaLink="true">http://ivanasetiawan.com/jekyll/update/2014/12/26/bird.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
+        <title>{{ post.title | xml_escape }}</title>
+        <description>{{ post.content | xml_escape }}</description>
+        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
+        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
+        {% for tag in post.tags %}
+        <category>{{ tag | xml_escape }}</category>
+        {% endfor %}
+        {% for cat in post.categories %}
+        <category>{{ cat | xml_escape }}</category>
+        {% endfor %}
       </item>
-    
-      <item>
-        <title>CA</title>
-        <description>&lt;p&gt;You taught me to be regret-less,&lt;br /&gt;
-And I am trying my best to understand how,&lt;br /&gt;
-When you are the main source of my regret.&lt;br /&gt;
-It’s never your fault, nor mine. Just situations.  &lt;/p&gt;
-
-&lt;p&gt;Anyway, I got diagnosed with autism.&lt;br /&gt;
-That’s why my brain obsesses certain things like a maniac.&lt;br /&gt;
-Something some close friends were already suspicious about.&lt;br /&gt;
-All I wish is I knew it earlier, so I could notify you.&lt;br /&gt;
-Who knows, maybe you could handle me better.&lt;/p&gt;
-
-&lt;p&gt;I phoned you 3726 miles away, you sounded so you.&lt;br /&gt;
-You seemed to be shocked that I still remember the story about your mom. &lt;br /&gt;
-Of course I do, you’ve always been my main amuser.&lt;br /&gt;
-I know I acted like a dumb fuck most of the time.&lt;br /&gt;
-But all of the detail information you shared with me stored perfectly untouched in my brain.&lt;br /&gt;
-It’s just that.. I cannot communicate how I feel fluently-aligned with my behaviour, &lt;br /&gt;
-It seems like I push people away when I like them the most.&lt;br /&gt;
-I don’t have to explain to you of course.. You experienced it yourself.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 20 Dec 2014 13:30:00 +0100</pubDate>
-        <link>http://ivanasetiawan.com/lyric/2014/12/20/ca.html</link>
-        <guid isPermaLink="true">http://ivanasetiawan.com/lyric/2014/12/20/ca.html</guid>
-        
-        
-        <category>lyric</category>
-        
-      </item>
-    
-      <item>
-        <title>Next summer,</title>
-        <description>&lt;p&gt;Next summer might be fun. I think.&lt;br /&gt;
-I am over you at least. I think.&lt;br /&gt;
-OK. I promise I won’t expect, nor think.  &lt;/p&gt;
-
-&lt;p&gt;Funny how I am back and forth and inside out about these three letters.&lt;br /&gt;
-Is it still too funny for you that I was so crazy for you last year, the year before and the year before that?&lt;br /&gt;
-One day before yesterday I still wondered if I could finally be good enough for anyone.&lt;br /&gt;
-Not just anyone - I mean for you and you for me.  &lt;/p&gt;
-
-&lt;p&gt;Next summer might be fun..&lt;br /&gt;
-I think..&lt;br /&gt;
-I am over you at least.&lt;br /&gt;
-Again, I promise I won’t expect, nor think.  &lt;/p&gt;
-
-&lt;p&gt;But I really hope it won’t be you, like last time at Westerpark.&lt;br /&gt;
-I was so unhappy. Just in case you’re wondering. &lt;br /&gt;
-I know you won’t. I just hope you would. &lt;br /&gt;
-I lost my self slowly getting to know you.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 21 Feb 2013 18:37:52 +0100</pubDate>
-        <link>http://ivanasetiawan.com/jekyll/update/2013/02/21/next-summer.html</link>
-        <guid isPermaLink="true">http://ivanasetiawan.com/jekyll/update/2013/02/21/next-summer.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
+    {% endfor %}
   </channel>
 </rss>
